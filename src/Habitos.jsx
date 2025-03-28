@@ -128,23 +128,27 @@ export default function Habitos() {
                 <div className="habitos">
                     {habits.length === 0
                         ? "Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para começar a trackear!"
-                        : habits.map((habit) => 
-                        <div className="habitos-container" key={habit.id}>{habit.name}
-                             <div className="weekdays">
-                                    {weekdays.map((day) => (
-                                        <button
-                                            key={day.id}
-                                            className={`weekday-button ${
-                                                habit.days.includes(day.id) ? "selected" : ""
-                                            }`}
-                                            disabled
-                                        >
-                                            {day.label}
-                                        </button>
-                                    ))}
+                        : habits.map((habit) => {
+                            console.log("Habit days:", habit.days);
+                            return (
+                                <div className="habitos-container" key={habit.id}>
+                                    <div>{habit.name}</div>
+                                    <div className="weekdays">
+                                        {weekdays.map((day) => (
+                                            <button
+                                                key={day.id}
+                                                className={`weekday-button ${
+                                                    habit.days.includes(day.id) ? "selected" : ""
+                                                }`}
+                                                disabled
+                                            >
+                                                {day.label}
+                                            </button>
+                                        ))}
+                                    </div>
                                 </div>
-                        </div>)
-                    }
+                            );
+                        })}
                 </div>
             </div>
         </HabitosDesign>

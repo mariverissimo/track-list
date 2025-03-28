@@ -2,10 +2,15 @@ import styled from "styled-components";
 
 const HabitosDesign = styled.div`
 .container-geral{
-padding-top: 20%;
+padding-top: 30%;
 height: 100vh;
 overflow-y: hidden;
-background-color: #D4D4D4;
+display:flex;
+flex-direction: column;
+width: 100%;
+height: 100vh;
+align-items: center;
+background-color: rgb(245, 243, 243);
 }
 span{
 font-family: Lexend Deca;
@@ -16,6 +21,7 @@ letter-spacing: 0%;
 color: #126BA5;
 }
 .topo{
+width: 340px;
 display: flex;
 gap: 30%;
 padding: 20px;
@@ -44,9 +50,8 @@ letter-spacing: 0%;
 color: #666666;
 }
 .form-container{
-margin-left: 20px;
 position: relative;
-width: 340px;
+width: 80%;
 height: 180px;
 padding: 20px;
 border-radius: 5px;
@@ -125,6 +130,7 @@ background-color: #D4D4D4;
 .habitos{
 display: flex;
 flex-direction: column;
+gap: 20px;
 align-items: center;
 justify-content: center;
 }
@@ -137,7 +143,7 @@ letter-spacing: 0%;
 text-align: left;
 color: #666666;
 padding: 20px;
-width: 340px;
+width: 90%;
 height: auto;
 border-radius: 5px;
 background-color: #FFFFFF;

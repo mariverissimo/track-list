@@ -1,4 +1,5 @@
 import TopoDesign from "./TopoDesign";
+import backupPfp from "./assets/suzaizai.jpeg"
 import { useUser } from "./UserContext";
 
 export default function Topo() {
@@ -9,7 +10,7 @@ export default function Topo() {
             <div className="topo-container">
                 <span>TrackIt</span>
                 {user ? (
-                    <img src={user.image} alt="imagem de perfil" />
+                    <img src={user.image || {backupPfp}} alt="imagem de perfil" />
                 ) : (
                     <p>Carregando...</p>
                 )}

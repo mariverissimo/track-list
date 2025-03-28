@@ -31,6 +31,7 @@ export default function Login() {
             })
             .then(response => {
                 const userData = response.data;
+                console.log(userData);
                 setUser(userData);
                 localStorage.setItem("user", JSON.stringify(userData));
                 navigate("/hoje");
